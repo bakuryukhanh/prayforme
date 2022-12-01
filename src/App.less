@@ -1,0 +1,186 @@
+#root {
+  width: 100%;
+}
+.center {
+  display: grid;
+  grid-template-columns: 10fr 5fr 2fr 1fr 2fr 20fr 2fr 1fr 2fr 5fr 10fr;
+  grid-template-rows: repeat(15, 1fr);
+  height: 100%;
+  padding-inline: 10%;
+  text-align: center;
+  grid-template-areas:
+  	".  .  .  .  .  c  .   .   .   .   .  "
+  	".  .  b2 b1 b1 c  br1 br1 br2 .   .  "
+  	".  .  b2 .  .  c  .   .   br2 .   .  "
+  	"a1 a1 b2 b7 b6 c  br6 br7 br2 ar1 ar1"
+  	"a1 a1 b3 b7 .  c1 .   br7 br3 ar1 ar1"
+  	"a1 a1 b4 b4 .  c2 .   br4 br4 ar1 ar1"
+  	"a1 a1 b5 b5 .  c2 .   br5 br5 ar1 ar1"
+  	"a1 a1 .  .  .  c3 .   .   .   ar1 ar1"
+  	".  .  .  .  .  c4 .   .   .   .   .  "
+  	".  .  .  .  .  c4 .   .   .   .   .  "
+  	".  .  .  .  .  c5 .   .   .   .   .  "
+  	".  c6 c6 c6 c6 c6 c6  c6  c6  c6  .  "
+  	".  c6 c6 c6 c6 c6 c6  c6  c6  c6  .  "
+  	".  c6 c6 c6 c6 c6 c6  c6  c6  c6  .  ";
+}
+
+.card{
+  background: #f4f5f4;
+  color: #06133a;
+  text-transform: uppercase;
+}
+
+.c1 {
+  grid-area: c1;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 33.333%;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 33.333%;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+  }
+}
+
+.c3 {
+  grid-area: c3;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+  }
+}
+
+.c4{
+  grid-area: c4;
+}
+
+.c5{
+  grid-area: c5;
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 2px;
+    height: 100%;
+    background-color:black;
+  }
+}
+.final{
+  grid-area: c6;
+}
+
+
+.b2 {
+  grid-area: b2;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.b1 {
+  grid-area: b1;
+  border-top: 2px solid black;
+}
+.b3 {
+  grid-area: b3;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.b4 {
+  grid-area: b4;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.b5 {
+  grid-area: b5;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.b6 {
+  grid-area: b6;
+  border-top: 2px solid black;
+}
+.b7 {
+  grid-area: b7;
+  border-right: 2px solid black;
+}
+.br2 {
+  grid-area: br2;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.br1 {
+  grid-area: br1;
+  border-top: 2px solid black;
+}
+.br3 {
+  grid-area: br3;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.br4 {
+  grid-area: br4;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.br5 {
+  grid-area: br5;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+}
+.br6 {
+  grid-area: br6;
+  border-top: 2px solid black;
+}
+
+.br7 {
+  grid-area: br7;
+  border-left: 2px solid black;
+}
+
+.quarter-final {
+  grid-area: c;
+}
+
+.round16 {
+  grid-area: a1;
+}
+.round16-2 {
+  grid-area: ar1;
+}
+
+.semi-final {
+  grid-area: c2;
+}
+
+.third-place {
+  grid-area: c4;
+  width: fit-content;
+  margin-inline: auto;
+}
+.empty0 {
+  grid-area: empty;
+  background-color: white;
+}
